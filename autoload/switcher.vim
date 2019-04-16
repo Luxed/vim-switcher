@@ -41,9 +41,6 @@ function! switcher#BuildCommands(options)
                 endif
             endif
 
-            echom ft
-            echom l:new_dict['extension']
-
             if l:remove != ''
                 let l:new_dict['remove'] = l:remove
             endif
