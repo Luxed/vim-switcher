@@ -21,3 +21,5 @@ if !exists('g:switcher_extensions')
 endif
 
 call switcher#BuildCommands(g:switcher_extensions)
+
+command! -nargs=1 Switch call switcher#OpenNewPath(<f-args>)
