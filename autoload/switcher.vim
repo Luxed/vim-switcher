@@ -22,3 +22,9 @@ function! switcher#OpenNewPath(options)
 
     execute 'edit ' . l:cwd . '/' . l:filename . '.' . l:new_ext
 endfunction
+
+function! switcher#Switch()
+    let l:ext = input('Enter file extension: ')
+
+    call switcher#OpenNewPath(l:ext)
+endfunction
