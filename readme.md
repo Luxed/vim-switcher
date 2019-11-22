@@ -11,8 +11,9 @@ For example, you want to switch from `app.component.html` to `app.component.ts`.
 
 ## How to use
 
-- Calling the `switcher#OpenNewPath([path])` function will prompt you to input the wanted file extension.
-- Calling the `switcher#Switch([options])` method will switch to the file by using input from a dictionnary of options
+- Calling the `switcher#Switch()` function will prompt you to input the wanted file extension.
+- Calling the `switcher#OpenNewPath([extension])` function (where extension is a `string`) will edit the file in a new buffer.
+- Calling the `switcher#OpenNewPath([options])` method will switch to the file by using input from a dictionnary of options:
   - `extension: string`: extension used for the new buffer.
   - `remove: string`: part of the _filename_ to remove.
   - `subdir: string`: adds a subdirectory to the path
