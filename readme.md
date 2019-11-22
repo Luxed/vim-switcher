@@ -18,3 +18,4 @@ For example, you want to switch from `app.component.html` to `app.component.ts`.
   - `remove: string`: part of the _filename_ to remove.
   - `subdir: string`: adds a subdirectory to the path
   - `edit_command: string`: command to launch when editing a files. Defaults to `edit`.
+- Calling the `switcher#SwitchWithOptions([options])` function (where `[options]` contains the options above), will ask you for an extension and add it in the `[options]` so you don't have to add it yourself.
