@@ -1,6 +1,7 @@
 function! switcher#OpenNewPath(options)
     let l:cwd = expand('%:p:h')
     let l:filename = expand('%:t:r')
+    let l:edit_command = 'edit'
 
     let l:new_ext = ''
 
@@ -18,9 +19,13 @@ function! switcher#OpenNewPath(options)
       if has_key(a:options, 'subdir')
         let l:cwd += '/' . a:options['subdir']
       endif
+
+      if has_key(a:options, 'edit_command')
+          let l:edit_command = a:options['edit_command']
+      endif
     endif
 
-    execute 'edit ' . l:cwd . '/' . l:filename . '.' . l:new_ext
+    execute l:edit_command . ' ' . l:cwd . '/' . l:filename . '.' . l:new_ext
 endfunction
 
 function! switcher#Switch()
